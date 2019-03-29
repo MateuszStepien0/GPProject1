@@ -153,20 +153,26 @@ xcopy $(GLEW_SDK)\bin\Release\Win32 $(TargetDir) /C /Y</Command>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="Cube.h" />
     <ClInclude Include="Debug.h" />
-    <ClInclude Include="Easing.h" />
+    <ClInclude Include="EndGoal.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="Matrix3.h" />
+    <ClInclude Include="PlayerObject.h" />
+    <ClInclude Include="Spike.h" />
+    <ClInclude Include="SpikeOpject.h" />
     <ClInclude Include="stb_image.h" />
-    <ClInclude Include="Vector3.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Easing.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="EndGoal.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="PlayerObject.cpp" />
+    <ClCompile Include="SpikeOpject.cpp" />
     <ClCompile Include="stb_image.c" />
   </ItemGroup>
   <ItemGroup>

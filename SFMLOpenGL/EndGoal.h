@@ -1,5 +1,4 @@
-#ifndef GAME_OBJECT_H
-#define GAME_OBJECT_H
+#pragma once
 
 #include <stdio.h>
 #include <string.h>
@@ -11,24 +10,26 @@
 
 using namespace glm;
 
-class GameObject
+class EndGoal
 {
 private:
 
+	// Position of the end goal in the world.
 	vec3 m_position;
 
-	vec3 m_rotation;
-public:
-	GameObject();
-	~GameObject();
+	// Rotation of the end goal.
+	float m_rotation;
 
+public:
+	EndGoal();
+
+	// Collision rectangle ofr the end Goal;
 	sf::RectangleShape m_collisionBox;
 
-	vec3 getPosition();
+	void update();
+
+	vec3 getPosition();	
 	void setPosition(vec3 position);
 
 	mat4 getModelToWorldMatrix();
 };
-
-#endif // !GAME_OBJECT_H
-

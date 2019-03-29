@@ -1,9 +1,8 @@
-#ifndef GAME_OBJECT_H
-#define GAME_OBJECT_H
+#pragma once
 
 #include <stdio.h>
 #include <string.h>
-#include <Cube.h>
+#include <Spike.h>
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
@@ -11,16 +10,19 @@
 
 using namespace glm;
 
-class GameObject
+class SpikeObject
 {
 private:
 
+	// Position of the SpikeObject
 	vec3 m_position;
 
+	// Rotation of the SpikeObject
 	vec3 m_rotation;
+
 public:
-	GameObject();
-	~GameObject();
+	SpikeObject();
+	~SpikeObject();
 
 	sf::RectangleShape m_collisionBox;
 
@@ -28,7 +30,5 @@ public:
 	void setPosition(vec3 position);
 
 	mat4 getModelToWorldMatrix();
+
 };
-
-#endif // !GAME_OBJECT_H
-
